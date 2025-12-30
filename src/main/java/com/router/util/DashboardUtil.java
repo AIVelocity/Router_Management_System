@@ -5,6 +5,7 @@ import org.springframework.http.*;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -30,7 +31,7 @@ public class DashboardUtil {
 	    
 	    HttpHeaders headers = new HttpHeaders();
 	    headers.setBearerAuth(accessToken);
-	    headers.setAccept(List.of(MediaType.APPLICATION_JSON));
+	    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 
 	    
 	    HttpEntity<Void> requestEntity = new HttpEntity<>(headers);
@@ -54,7 +55,7 @@ public class DashboardUtil {
 		    
 		    HttpHeaders headers = new HttpHeaders();
 		    headers.setBearerAuth(accessToken);
-		    headers.setAccept(List.of(MediaType.APPLICATION_JSON));
+		    headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 
 		    
 		    HttpEntity<Void> requestEntity = new HttpEntity<>(headers);
